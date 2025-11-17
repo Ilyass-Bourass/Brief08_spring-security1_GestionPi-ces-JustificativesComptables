@@ -21,7 +21,7 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String nomComplet;
     private String email;
@@ -32,6 +32,11 @@ public class User {
     @JoinColumn(name="societe_id")
     private Societe societe;
     private boolean actif=false;
-    private LocalDateTime dateCreation=LocalDateTime.now();
+    private  LocalDateTime dateCreation;
+
+    @PrePersist
+    public void prePersist(){
+        dateCreation=LocalDateTime.now();
+    }
 
 }

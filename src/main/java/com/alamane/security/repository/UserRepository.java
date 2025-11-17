@@ -1,4 +1,7 @@
 package com.alamane.security.repository;
 
-public interface UserRepository {
+import com.alamane.security.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User,Long> {
 }
