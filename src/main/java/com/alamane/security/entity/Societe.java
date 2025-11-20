@@ -29,4 +29,7 @@ public class Societe {
     private String adresse;
     @OneToMany(mappedBy = "societe")
     private List<User> users;
+
+    @OneToMany(mappedBy = "societe")
+    private List<Document> documents;
 }
