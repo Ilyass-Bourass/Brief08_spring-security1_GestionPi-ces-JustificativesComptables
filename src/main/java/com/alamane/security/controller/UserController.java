@@ -6,11 +6,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 
-@RequestMapping("/test")
+@RequestMapping("/api")
+
 public class UserController {
-    @GetMapping
+    @GetMapping("/comptable")
     public String test(){
-        return "test";
+        return "test comptable";
+    }
+
+    @GetMapping("/societe")
+    public String testAdmin(){
+        return "test societe";
     }
 
 }
