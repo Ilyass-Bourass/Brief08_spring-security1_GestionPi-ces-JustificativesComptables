@@ -5,6 +5,7 @@ import com.alamane.security.enums.TypeDocument;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -30,7 +31,7 @@ public class Document {
     private String categorieComptable;
 
     @Column(nullable = false)
-    private LocalDateTime datePiece;
+    private LocalDate datePiece;
 
     private Double montant;
 
