@@ -5,5 +5,5 @@ import com.alamane.security.dto.DocumentResponseDto;
 import org.springframework.web.multipart.MultipartFile;
 
 public interface DocumentServiceInterfece {
-    public DocumentResponseDto createDocument(DocumentRequestDto dto, MultipartFile file);
+    public DocumentResponseDto create(DocumentRequestDto dto, MultipartFile file);
 }

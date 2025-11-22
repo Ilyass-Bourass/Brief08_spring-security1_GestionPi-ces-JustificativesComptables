@@ -33,7 +33,7 @@ public class ConfigSecurity {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**", "/h2/**","/api/documents").permitAll()
+                        .requestMatchers("/api/auth/**", "/h2/**","/api/documents/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
